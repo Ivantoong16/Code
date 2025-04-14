@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Plan - Story of My Life</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="nav-logo">⾕</a>
+        </div>
+    </nav>
+
+    <main class="plan-container">
+        <h1 class="section-title animate-slide-up">Weekly Exercise Plan</h1>
+        
+        <div class="plan-form animate-fade-in">
+            <div class="form-group">
+                <label for="day">Select Day:</label>
+                <select id="day" class="form-control" onchange="displayRoutine()">
+                    <option value="----">----</option>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="exercise">Exercise:</label>
+                <input type="text" id="exercise" class="form-control" placeholder="Exercise name">
+            </div>
+
+            <div class="form-group">
+                <label for="duration">Duration:</label>
+                <input type="number" id="duration" class="form-control" placeholder="Duration (min)">
+            </div>
+
+            <div class="button-group">
+                <button onclick="addExercise()" class="btn btn-primary">Add Exercise</button>
+                <button onclick="clearRoutine()" class="btn btn-secondary">Clear All</button>
+            </div>
+        </div>
+
+        <div id="routine" class="routine-container animate-fade-in"></div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 My Life Story</p>
+    </footer>
+</body>
+</html>
